@@ -1,20 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { CopilotKit } from "@copilotkit/react-core";
-
-import './index.css'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import "@copilotkit/react-ui/styles.css";
+import './index.css'
+import { ThemeProvider } from './components/ThemeProvider'
+import { CopilotKit } from "@copilotkit/react-core"
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-       <CopilotKit
-        runtimeUrl="http://localhost:4000/copilotkit"
-        agent='health_buddy_agent'
-        showDevConsole={true}
-      >
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <CopilotKit runtimeUrl="http://localhost:4000/copilotkit">
+      <ThemeProvider>
         <App />
-      </CopilotKit>
-    
-  </StrictMode>,
+      </ThemeProvider>
+    </CopilotKit>
+  </React.StrictMode>,
 )

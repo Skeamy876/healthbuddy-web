@@ -1,0 +1,141 @@
+/* Chat component custom styles - Light Mode */
+.custom-chat-container :global(.copilotkit-chat-container) {
+  border: none !important;
+  border-radius: 0.75rem !important;
+  overflow: hidden !important;
+  background-color: white !important;
+}
+
+.custom-chat-container :global(.copilotkit-chat-input-container) {
+  background-color: rgb(249 250 251) !important;
+  border-top: 1px solid rgb(229 231 235) !important;
+  padding: 0.75rem !important;
+}
+
+.custom-chat-container :global(.copilotkit-chat-input) {
+  border: 1px solid rgb(229 231 235) !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 1rem !important;
+  transition: all 0.2s ease-in-out !important;
+  background-color: white !important;
+  color: rgb(17 24 39) !important;
+}
+
+.custom-chat-container :global(.copilotkit-chat-input:focus) {
+  border-color: transparent !important;
+  box-shadow: 0 0 0 2px rgb(59 130 246) !important;
+  outline: none !important;
+}
+
+.custom-chat-container :global(.copilotkit-chat-submit-button) {
+  background-color: rgb(59 130 246) !important;
+  color: white !important;
+  transition: background-color 0.2s ease-in-out !important;
+}
+
+.custom-chat-container :global(.copilotkit-chat-submit-button:hover) {
+  background-color: rgb(37 99 235) !important;
+}
+
+/* Additional selectors for better coverage - Light Mode */
+.custom-chat-container :global(.copilotkit-chat-messages) {
+  background-color: white !important;
+}
+
+.custom-chat-container :global(.copilotkit-chat-message) {
+  color: rgb(17 24 39) !important;
+}
+
+/* Light mode CopilotKit components */
+:not(.dark) [class*="copilotkit"] {
+  background-color: white !important;
+  color: rgb(17 24 39) !important;
+  border-color: rgb(229 231 235) !important;
+}
+
+:not(.dark) [class*="copilotkit"] input,
+:not(.dark) [class*="copilotkit"] textarea {
+  background-color: white !important;
+  color: rgb(17 24 39) !important;
+  border-color: rgb(229 231 235) !important;
+}
+
+:not(.dark) [class*="copilotkit"] input::placeholder,
+:not(.dark) [class*="copilotkit"] textarea::placeholder {
+  color: rgb(107 114 128) !important;
+}
+
+/* Dark mode styles - more comprehensive */
+.dark .custom-chat-container :global(.copilotkit-chat-container) {
+  background-color: rgb(31 41 55) !important;
+}
+
+.dark .custom-chat-container :global(.copilotkit-chat-input-container) {
+  background-color: rgb(55 65 81) !important;
+  border-color: rgb(75 85 99) !important;
+}
+
+.dark .custom-chat-container :global(.copilotkit-chat-input) {
+  background-color: rgb(31 41 55) !important;
+  border-color: rgb(75 85 99) !important;
+  color: rgb(229 231 235) !important;
+}
+
+.dark .custom-chat-container :global(.copilotkit-chat-input::placeholder) {
+  color: rgb(156 163 175) !important;
+}
+
+.dark .custom-chat-container :global(.copilotkit-chat-messages) {
+  background-color: rgb(31 41 55) !important;
+}
+
+.dark .custom-chat-container :global(.copilotkit-chat-message) {
+  color: rgb(229 231 235) !important;
+}
+
+.dark .custom-chat-container :global(.copilotkit-user-message) {
+  background-color: rgb(59 130 246) !important;
+  color: white !important;
+}
+
+.dark .custom-chat-container :global(.copilotkit-assistant-message) {
+  background-color: rgb(55 65 81) !important;
+  color: rgb(229 231 235) !important;
+}
+
+/* Override any potential inline styles or other conflicting styles */
+.dark .custom-chat-container * {
+  color-scheme: dark !important;
+}
+
+/* Additional CopilotKit selectors that might be needed */
+.dark .custom-chat-container :global([class*="copilotkit"]) {
+  background-color: rgb(31 41 55) !important;
+  color: rgb(229 231 235) !important;
+}
+
+.dark .custom-chat-container :global([class*="copilotkit-chat-input"]) {
+  background-color: rgb(31 41 55) !important;
+  border-color: rgb(75 85 99) !important;
+  color: rgb(229 231 235) !important;
+}
+
+/* Light mode chat wrapper - explicit styles */
+.dark-mode-chat-wrapper * {
+  background-color: white;
+  color: rgb(17 24 39);
+}
+
+/* Dark mode chat wrapper - most aggressive approach */
+.dark .dark-mode-chat-wrapper * {
+  background-color: rgb(31 41 55) !important;
+  color: rgb(229 231 235) !important;
+}
+
+.dark .dark-mode-chat-wrapper [style*="background"] {
+  background: rgb(31 41 55) !important;
+}
+
+.dark .dark-mode-chat-wrapper [style*="color"] {
+  color: rgb(229 231 235) !important;
+}
